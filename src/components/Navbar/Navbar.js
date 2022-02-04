@@ -3,15 +3,16 @@ import './Navbar.css'
 const Navbar = () => {
     return(
       <nav className = 'Navbar'>
-          <div>
-              <h4>Pokemon Store</h4>
-              <p>Pokebolls</p>
-              <p>Medicines</p>
-              <p>Other objects</p>
-
+        <span className = "nav-logo">Pokemon Store</span>
+          <div className ="nav-items">
+              <a href= "/home">Home</a>
+              <a href= "/pokebalss">Pokeballs</a>
+              <a href= "/medicine">Medicine</a>
+              <a href= "/other">Other Objects</a>
           </div>
       </nav>
     )
   }
+
 
   export default Navbar

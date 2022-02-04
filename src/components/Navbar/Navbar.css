@@ -2,8 +2,42 @@
     display: flex;
     background: transparent;
     justify-content: space-around;
-    flex-direction: row;
     align-items: center;
     height: 60px;
     background: coral;
+}
+
+.Navbar > .nav-logo{
+    font-weight: 700;
+    font-size: 21px;
+    margin: 15px;
+    color: #ffffff;
+}
+
+.Navbar > .nav-items > a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 15px;
+    position: relative;
+    opacity: 0.9;
+}
+
+.Navbar > .nav-items > a:hover {
+    opacity: 1;
+}
+
+.Navbar > .nav-items > a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: all .45s;
+}
+
+.Navbar > .nav-items > a:hover::before {
+    width: 100%;
 }
