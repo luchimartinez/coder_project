@@ -10,8 +10,12 @@
 .Navbar > .nav-logo{
     font-weight: 700;
     font-size: 21px;
-    margin: 15px;
+    margin: 20px;
     color: #ffffff;
+}
+
+.Navbar > .nav-logo > span{
+    margin:20px;
 }
 
 .Navbar > .nav-items > a {
