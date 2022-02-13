@@ -5,4 +5,18 @@
     font-size: 21px;
     margin: 20px;
     color: #ffffff;
+    border-radius: 30%;
+    width: 110px;
+    transition: 1s ease;
+}
+
+.carritoSection > p {
+    padding-right: 25px
+}
+
+.carritoSection:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
 }

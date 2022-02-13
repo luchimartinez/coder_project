@@ -20,7 +20,7 @@ const Navbar = () => {
               <a href= {Ropa}>Ropa</a>
               <a href= {Deco}>Deco</a>
           </div>
-          <Cartwidget/>
+          <Cartwidget color="#fd946e"/>
       </nav>
     )
   }
