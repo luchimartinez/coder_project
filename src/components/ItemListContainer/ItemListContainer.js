@@ -1,14 +1,26 @@
-import ItemCount from "../ItemCount/ItemCount"
-
-const addToCart = (number) => {
-    console.log(`Se agregaron al carrito ${number} items`)   
-  }
+import ItemList from  "../ItemList/ItemList"
+import { getProducts } from '../../asyncmock'
+import React, {useEffect, useState} from 'react'
 
 const Catalogue = () => {
+
+    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+    
+    useEffect(()=>{
+        getProducts.then((res) => {
+            setProducts({res})
+            console.log(res)
+            setLoading(false)
+        })
+        .catch((error) =>{
+            console.log(error)
+        })   
+    },[])
+
     return(
         <div>
-        <h1>Este es el catalogo</h1>
-        <ItemCount stock={10} initial={1} onAdd={addToCart}    />
+            {loading ? <h1>Cargando...</h1>:  <ItemList products={products}/>}
         </div>
         
     )
