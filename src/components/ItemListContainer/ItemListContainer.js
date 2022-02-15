@@ -1,6 +1,7 @@
 import ItemList from  "../ItemList/ItemList"
 import { getProducts } from '../../asyncmock'
 import  {useEffect, useState} from 'react'
+import './ItemListContainer.css'
 
 const Catalogue = () => {
 
@@ -21,7 +22,7 @@ const Catalogue = () => {
     return(
         
         <div>
-            {loading ? <h1>Cargando...</h1>:  <ItemList products={products}/>}
+            {loading ? <h1 className="typewriter">Cargando.....</h1>:  <ItemList products={products}/>}
         </div>
         
     )
