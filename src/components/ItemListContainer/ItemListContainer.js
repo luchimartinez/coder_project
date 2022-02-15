@@ -1,6 +1,6 @@
 import ItemList from  "../ItemList/ItemList"
 import { getProducts } from '../../asyncmock'
-import React, {useEffect, useState} from 'react'
+import  {useEffect, useState} from 'react'
 
 const Catalogue = () => {
 
@@ -9,7 +9,7 @@ const Catalogue = () => {
     
     useEffect(()=>{
         getProducts.then((res) => {
-            setProducts({res})
+            setProducts(res)
             console.log(res)
             setLoading(false)
         })
@@ -19,6 +19,7 @@ const Catalogue = () => {
     },[])
 
     return(
+        
         <div>
             {loading ? <h1>Cargando...</h1>:  <ItemList products={products}/>}
         </div>
