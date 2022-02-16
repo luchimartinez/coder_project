@@ -9,9 +9,9 @@ const Catalogue = () => {
     const [loading, setLoading] = useState(true)
     
     useEffect(()=>{
-        getProducts.then((res) => {
-            setProducts(res)
-            console.log(res)
+        getProducts.then((products) => {
+            setProducts(products)
+            console.log(products)
             setLoading(false)
         })
         .catch((error) =>{

@@ -1,0 +1,23 @@
+.itemContainer{
+    width: 700px;
+    border: 3px solid coral;
+}
+
+.productDetails > button {
+    background-color: coral; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    /* border-radius: 15%; */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    margin-bottom: 15px
+}
+
+.productDetails > button:hover {
+    background-color: rgb(252, 91, 32); /* Green */
+}

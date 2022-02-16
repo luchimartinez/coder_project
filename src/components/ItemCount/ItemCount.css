@@ -2,8 +2,8 @@
 
 background-color: #ffffff;
 /* border: 2px solid black; */
-margin-left: 500px;
-margin-right: 500px;
+/* margin-left: 500px;
+margin-right: 500px; */
 border-radius: 10px;
 color: black;
 font-weight: bold;
@@ -25,7 +25,7 @@ padding-bottom: 60px
 }
 
 .btn-count{
-    background-color: #2379a1; /* Green */
+    background-color: #41a36d; /* Green */
     border: none;
     color: white;
     padding: 10px 10px;
@@ -40,7 +40,7 @@ padding-bottom: 60px
 }
 
 .btn-cart{
-    background-color: #2379a1; /* Green */
+    background-color: #41a36d; /* Green */
     border: none;
     color: white;
     padding: 15px 15px;
@@ -48,7 +48,7 @@ padding-bottom: 60px
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    border-radius: 10%;
+  /*   border-radius: 10%; */
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     position: relative;
@@ -56,5 +56,5 @@ padding-bottom: 60px
 }
 
 button:hover {
-    background-color: #629ab4; /* Green */
+    background-color: #2b9159; /* Green */
 }

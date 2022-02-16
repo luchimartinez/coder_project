@@ -1,7 +1,7 @@
 import './Item.css'
 import ItemCount from "../ItemCount/ItemCount"
 
-const Item = (key, name, price, img, stock)=> {
+const Item = ({key, name, price, img, stock})=> {
 
     const addToCart = (number) => {
         console.log(`Se agregaron al carrito ${number} items`)   

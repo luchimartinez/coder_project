@@ -15,10 +15,10 @@ const Navbar = () => {
           <span>Pokemon Store</span>
         </div>
           <div className ="nav-items">
-              <a href= {Home}>Home</a>
-              <a href= {Peluches}>Peluches</a>
-              <a href= {Ropa}>Ropa</a>
-              <a href= {Deco}>Deco</a>
+              <a>Home</a>
+              <a>Peluches</a>
+              <a>Ropa</a>
+              <a>Deco</a>
           </div>
           <Cartwidget color="#fd946e"/>
       </nav>
