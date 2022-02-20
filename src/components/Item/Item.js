@@ -1,7 +1,7 @@
 import './Item.css'
-import ItemCount from "../ItemCount/ItemCount"
+import { NavLink } from 'react-router-dom'
 
-const Item = ({product,routing})=> {
+const Item = ({product})=> {
 
     const addToCart = (number) => {
         console.log(`Se agregaron al carrito ${number} items`)   
@@ -12,10 +12,11 @@ const Item = ({product,routing})=> {
             <div className="name">
                 <h4>{product.name}</h4>
                 <img src={product.imgfront}/>
-                <p>{product.price}</p>
+                <p>${product.price}</p>
             </div>
             <div className="productDetails">
-                <button className='info_btn' onClick= {() => routing({path: 'detail', id: product.id})}>Ver detalle de producto</button>
+              <buton className='info_btn'><NavLink to={`/detail/${product.id}`}>Ver detalle</NavLink></buton>
+                {/* <button className='info_btn' onClick= {() => routing({path: 'detail', id: product.id})}>Ver detalle de producto</button> */}
 {/*                 <p>Stock disponible: {stock}</p> */}
             </div>
 {/*             <ItemCount stock={stock} initial={1} onAdd={addToCart}/> */}

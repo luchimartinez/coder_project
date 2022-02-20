@@ -18,7 +18,7 @@
     margin:20px;
 }
 
-.Navbar > .nav-items > a {
+.Navbar > .nav-items > .category {
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
@@ -27,11 +27,11 @@
     opacity: 0.9;
 }
 
-.Navbar > .nav-items > a:hover {
+.Navbar > .nav-items > .category:hover {
     opacity: 1;
 }
 
-.Navbar > .nav-items > a:before {
+.Navbar > .nav-items > .category:before {
     content: "";
     position: absolute;
     left: 0;
@@ -42,6 +42,10 @@
     transition: all .45s;
 }
 
-.Navbar > .nav-items > a:hover::before {
+.Navbar > .nav-items > .category:hover::before {
     width: 100%;
+}
+
+.Navbar > .nav-items > .category:hover{
+    cursor: default;
 }

@@ -7,7 +7,7 @@
 }
 
 
-.productDetails > button {
+.productDetails > .info_btn {
     background-color: coral; /* Green */
     border: none;
     color: white;
@@ -16,13 +16,13 @@
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
-    /* border-radius: 15%; */
+/*      border-radius: 15%;  */
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     margin-bottom: 15px
 }
 
-.productDetails > button:hover {
+.productDetails > .info_btn:hover {
     background-color: rgb(252, 91, 32); /* Green */
     border: 2px solid black
 }

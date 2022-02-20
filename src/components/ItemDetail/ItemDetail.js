@@ -1,4 +1,6 @@
 import './ItemDetail.css'
+import ItemCount from "../ItemCount/ItemCount"
+import Item from '../Item/Item'
 
 const ItemDetail = ({ product }) => {
     return (
@@ -23,7 +25,7 @@ const ItemDetail = ({ product }) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                
+                <ItemCount/>
             </footer>
         </article>
     )
