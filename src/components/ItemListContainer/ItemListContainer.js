@@ -3,7 +3,7 @@ import { getProducts } from '../../asyncmock'
 import  {useEffect, useState} from 'react'
 import './ItemListContainer.css'
 
-const Catalogue = () => {
+const ItemListContainer = ({routing}) => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -22,10 +22,10 @@ const Catalogue = () => {
     return(
         
         <div>
-            {loading ? <h1 className="typewriter">Cargando.....</h1>:  <ItemList products={products}/>}
+            {loading ? <h1 className="typewriter">Cargando.....</h1>:  <ItemList products={products}  routing = {routing}/>}
         </div>
         
     )
 }
 
-export default Catalogue; 
+export default ItemListContainer; 

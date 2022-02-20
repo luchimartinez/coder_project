@@ -1,7 +1,11 @@
 .itemContainer{
-    width: 700px;
+    width: 300px;
     border: 3px solid coral;
+    border-radius: 20%;
+    margin-top: 20px;
+    box-shadow: 10px 5px 5px rgb(194, 191, 191);
 }
+
 
 .productDetails > button {
     background-color: coral; /* Green */
@@ -20,4 +24,5 @@
 
 .productDetails > button:hover {
     background-color: rgb(252, 91, 32); /* Green */
+    border: 2px solid black
 }
