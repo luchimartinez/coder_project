@@ -25,7 +25,37 @@ const products = [
         imgfront:'https://www.pokemoncenter.com/products/images/P7671/710-09832/P7671_710-09832_01_thumb.jpg',
         imgback: 'https://www.pokemoncenter.com/products/images/P7671/710-09832/P7671_710-09832_02_thumb.jpg', 
         stock: '20', 
-        escription: 'Descripcion de ajedrez'}
+        description: 'Descripcion de ajedrez'},
+
+    {
+        id:4, 
+        name: 'Pikachu Moussepad', 
+        price: 'usd 9.99', 
+        category: 'Deco',
+        imgfront:'https://www.pokemoncenter.com/products/images/P7301/710-08793/P7301_710-08793_01_thumb.jpg',
+        imgback: 'https://www.pokemoncenter.com/products/images/P7301/710-08793/P7301_710-08793_02_thumb.jpg', 
+        stock: '50', 
+        description: 'Descripcion de moussepad'},
+
+    {
+        id:5, 
+        name: 'Squirtle', 
+        price: 'usd 14.99', 
+        category: 'Peluches',
+        imgfront:'https://www.pokemoncenter.com/products/images/P5073/701-03991/P5073_701-03991_01_thumb.jpg',
+        imgback: 'https://www.pokemoncenter.com/products/images/P5073/701-03991/P5073_701-03991_02_thumb.jpg', 
+        stock: '10', 
+        description: 'Descripcion de peluche'},
+        
+    {
+        id:6, 
+        name: 'Buzo de Gengar', 
+        price: 'usd 54.99', 
+        category: 'Ropa',
+        imgfront:'https://www.pokemoncenter.com/products/images/P6984/741-08277/P6984_741-08277_01_thumb.jpg',
+        imgback: 'https://www.pokemoncenter.com/products/images/P6984/741-08277/P6984_741-08277_02_thumb.jpg', 
+        stock: '100', 
+        description: 'Descripcion de buzo'}
 ]
 
 
