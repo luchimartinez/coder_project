@@ -1,8 +1,28 @@
 import './ItemDetail.css'
 import ItemCount from "../ItemCount/ItemCount"
-import Item from '../Item/Item'
+import React, {useState, useEffect} from 'react'
+import { NavLink } from 'react-router-dom'
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({product}) => {
+
+    const [quantity, setQuantity] = useState(1)
+    const [isActive, setIsActive] = useState(false)
+
+    const handleOnAdd = (e) => {
+        if (e < product?.stock){
+            console.log("esto vale e", e)
+            setQuantity(e)
+        }
+
+    }
+
+    useEffect(() => {
+        console.log("esto vale quantity",quantity)
+        if (quantity < product?.stock ){
+            setIsActive(true)
+        }
+    }, [quantity])
+
     return (
         <article className="CardItem">
             <header className="Header">
@@ -25,7 +45,7 @@ const ItemDetail = ({ product }) => {
                 </p>
             </section>           
             <footer className='ItemFooter'>
-                <ItemCount/>
+                {(!isActive)? <ItemCount stock={product?.stock} initial={1} onAdd={handleOnAdd} /> : <NavLink to='/cart' className='addToCart'>Ver Carrito</NavLink> }
             </footer>
         </article>
     )

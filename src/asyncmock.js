@@ -59,6 +59,8 @@ const products = [
 ]
 
 
+
+
 export const getProducts = new Promise((resolve) => {
     setTimeout(() => {
         resolve(products)

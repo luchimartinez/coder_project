@@ -18,7 +18,7 @@ const ItemListContainer = () => {
         })
         .catch((error) =>{
             console.log(error)
-        })   
+        }) 
     },[categoryId ==='Home']) 
 
     useEffect(()=>{
