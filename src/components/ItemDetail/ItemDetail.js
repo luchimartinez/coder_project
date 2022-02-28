@@ -1,17 +1,20 @@
 import './ItemDetail.css'
 import ItemCount from "../ItemCount/ItemCount"
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { NavLink } from 'react-router-dom'
+import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({product}) => {
 
     const [quantity, setQuantity] = useState(1)
     const [isActive, setIsActive] = useState(false)
+    const {addItem} = useContext(CartContext)
 
     const handleOnAdd = (e) => {
         if (e < product?.stock){
             console.log("esto vale e", e)
             setQuantity(e)
+            
         }
 
     }
@@ -20,6 +23,7 @@ const ItemDetail = ({product}) => {
         console.log("esto vale quantity",quantity)
         if (quantity < product?.stock ){
             setIsActive(true)
+            addItem(product,quantity)
         }
     }, [quantity])
 
