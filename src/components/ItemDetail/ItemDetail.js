@@ -6,15 +6,15 @@ import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({product}) => {
 
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(0)
     const [isActive, setIsActive] = useState(false)
     const {addItem} = useContext(CartContext)
 
     const handleOnAdd = (e) => {
         if (e < product?.stock){
             console.log("esto vale e", e)
+            console.log(quantity)
             setQuantity(e)
-            
         }
 
     }

@@ -1,0 +1,9 @@
+.containerCart{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.totalDiv{
+    margin-top: 50px;
+}

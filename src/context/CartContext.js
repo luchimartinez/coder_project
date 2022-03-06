@@ -29,10 +29,8 @@ export const CartContextProvider = ({children}) => {
     }
 
     const removeItem = (id =>{
-        let res = cart.filter(p => p.id != id)
-        return(
-            cart = res
-        )
+        let res = cart.filter((p) => p.id !== id)
+        setCart(res)
     })
 
     const clear = () => {
@@ -54,8 +52,30 @@ export const CartContextProvider = ({children}) => {
         setCart(newProducts)
     }
 
+    const getTotal = () =>{
+        let count = 0
+        cart.forEach(prod =>{
+            count = count + prod.price
+        })
+        return count.toFixed(2)
+    }
+
+    const getQuantity = () =>{
+        let count = 0
+        cart.forEach(prod =>{
+            count = count + prod.quantity
+        })
+        return count
+    }
+
     return (
-        <Context.Provider value={{cart, addItem, removeItem}}>
+        <Context.Provider value={{
+            cart,
+            addItem, 
+            removeItem,
+            clear,
+            getTotal,
+            getQuantity}}>
             {children}
         </Context.Provider>
     )

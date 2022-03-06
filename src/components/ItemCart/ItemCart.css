@@ -1,0 +1,21 @@
+.itemDiv{
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    border: 3px solid coral;
+    border-radius: 20%;
+    margin-top: 20px;
+    box-shadow: 10px 5px 5px rgb(194, 191, 191);
+}
+
+.itemDiv >button{
+    border-radius: 10%;
+    background-color: coral;
+    color: white;
+    width: 100px;
+}
+
+.itemDiv >img{
+    width: 200px;
+    height: 200px;
+}
