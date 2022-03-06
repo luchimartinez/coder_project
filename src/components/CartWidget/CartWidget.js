@@ -8,10 +8,6 @@ const Cartwidget = ({color}) => {
 
     const {getQuantity} = useContext(Context)
 
-    if (getQuantity()==0){
-        
-    }
-
     return (
         <div>
             {getQuantity()!==0&& 

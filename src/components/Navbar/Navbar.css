@@ -18,7 +18,7 @@
     margin:20px;
 }
 
-.Navbar > .nav-items > .category {
+.Navbar > .nav-items a {
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
@@ -27,11 +27,11 @@
     opacity: 0.9;
 }
 
-.Navbar > .nav-items > .category:hover {
+.Navbar > .nav-items a:hover {
     opacity: 1;
 }
 
-.Navbar > .nav-items > .category:before {
+.Navbar > .nav-items a:before {
     content: "";
     position: absolute;
     left: 0;

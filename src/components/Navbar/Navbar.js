@@ -2,10 +2,26 @@ import './Navbar.css'
 import logo from "../Imagenes/logo.png"
 import Cartwidget from '../CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
+import { useContext, useEffect,useState } from 'react';
+import { getDocs,collection } from 'firebase/firestore';
+import Context from '../../context/CartContext';
+import { firestoreDb } from '../../firebase/firebase';
 
 
 
 const Navbar = () => { 
+  const [categories, setCategories] = useState([])
+  const {products} = useContext(Context)
+
+  useEffect(()=>{
+    getDocs(collection(firestoreDb,'categories')).then(response=>{
+      const categories = response.docs.map(cat=>{
+        return {id: cat.id, ...cat.data()}
+      })
+      setCategories(categories)
+    })
+  },[])
+
   return(
       <nav className = 'Navbar'>
         <div className = "nav-logo">
@@ -13,12 +29,18 @@ const Navbar = () => {
           <span>Pokemon Store</span>
         </div>
           <div className ="nav-items">
-{              <NavLink to={'/category/Home'} className='category' >Home</NavLink> }
+          {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>
+              isActive ? 'ActiveOption' : 'Option'
+            }>{cat.description}</NavLink>)}
+        </div>
+        <Cartwidget color="#fd946e"/>
+
+{/* {              <NavLink to={'/category/Home'} className='category' >Home</NavLink> }
               <NavLink to={'/category/Peluches'} className='category'>Peluches</NavLink>
               <NavLink to={'category/Ropa'}className='category'>Ropa</NavLink>
               <NavLink to={'category/Deco'}className='category'>Deco</NavLink>
           </div>
-          <Cartwidget color="#fd946e"/>
+          <Cartwidget color="#fd946e"/> */}
       </nav>
     )
   }

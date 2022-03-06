@@ -15,11 +15,10 @@ const Item = ({product})=> {
                 <p>${product.price}</p>
             </div>
             <div className="productDetails">
-              <buton className='info_btn'><NavLink to={`/detail/${product.id}`}>Ver detalle</NavLink></buton>
-                {/* <button className='info_btn' onClick= {() => routing({path: 'detail', id: product.id})}>Ver detalle de producto</button> */}
-{/*                 <p>Stock disponible: {stock}</p> */}
+              <button className='info_btn'>
+                <NavLink to={`/detail/${product.id}`}>Ver detalle</NavLink>
+              </button>
             </div>
-{/*             <ItemCount stock={stock} initial={1} onAdd={addToCart}/> */}
         </div>
     )
 } 

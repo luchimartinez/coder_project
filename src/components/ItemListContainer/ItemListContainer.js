@@ -1,9 +1,8 @@
 import ItemList from  "../ItemList/ItemList"
-import { getProducts, getProductsByCategory } from '../../asyncmock'
 import  {useEffect, useState} from 'react'
 import './ItemListContainer.css'
 import { useParams } from "react-router-dom"
-import { getDocs, collection } from "firebase/firestore"
+import { getDocs, collection, query, where } from "firebase/firestore"
 import { firestoreDb } from "../../firebase/firebase"
 
 const ItemListContainer = () => {
@@ -12,11 +11,11 @@ const ItemListContainer = () => {
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
     
-     useEffect(()=>{
+/*      useEffect(()=>{
         getProducts.then((products) => {
             setProducts(products)
             console.log(products)
-            setLoading(false)
+
         })
         .catch((error) =>{
             console.log(error)
@@ -26,17 +25,32 @@ const ItemListContainer = () => {
             setLoading(false);
 
         });
-    },[categoryId ==='Home']) 
+    },[categoryId ==='Home'])  */
 
     useEffect(()=>{
-        getProductsByCategory(categoryId).then((products)=>{
-            setLoading(false)
+        setLoading(true)
+        const collectionRef = categoryId ? 
+            query(collection(firestoreDb, 'products'),where('category', '==', categoryId)):
+            collection(firestoreDb, 'products')
+
+        getDocs(collectionRef).then(response =>{
+            const products = response.docs.map(doc =>{
+                console.log(doc)
+                return {id:doc.id,...doc.data()}
+            })
+            console.log(products)
             setProducts(products)
+        }).finally(()=>{
+            setLoading(false)
         })
-    },[categoryId])
+
+/*         return (() => {
+            setProducts()
+        })   */  
+    },[categoryId] )
 
     return(
-        
+         
         <div>
             {loading ? <h1 className="typewriter">Cargando.....</h1>:  <ItemList products={products}/>}
         </div>
