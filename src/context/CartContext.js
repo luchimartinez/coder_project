@@ -34,7 +34,7 @@ export const CartContextProvider = ({children}) => {
     })
 
     const clear = () => {
-       return cart = []
+        setCart([])
     }
 
     const sumarCantidad = (product, quantity) => {

@@ -29,18 +29,12 @@ const Navbar = () => {
           <span>Pokemon Store</span>
         </div>
           <div className ="nav-items">
+            <NavLink to={'/'}>Home</NavLink>
           {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>
               isActive ? 'ActiveOption' : 'Option'
             }>{cat.description}</NavLink>)}
         </div>
-        <Cartwidget color="#fd946e"/>
-
-{/* {              <NavLink to={'/category/Home'} className='category' >Home</NavLink> }
-              <NavLink to={'/category/Peluches'} className='category'>Peluches</NavLink>
-              <NavLink to={'category/Ropa'}className='category'>Ropa</NavLink>
-              <NavLink to={'category/Deco'}className='category'>Deco</NavLink>
-          </div>
-          <Cartwidget color="#fd946e"/> */}
+          <Cartwidget color="#fd946e"/>
       </nav>
     )
   }

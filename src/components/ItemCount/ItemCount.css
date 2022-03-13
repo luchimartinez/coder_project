@@ -11,12 +11,6 @@ display: inline-block;
 
 }
 
-.div-buttons{
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    top: 40px;
-}
 
 .div-buttons > p{
     position: relative;
@@ -27,19 +21,27 @@ display: inline-block;
     background-color: #41a36d; /* Green */
     border: none;
     color: white;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 14px;
     border-radius: 10%;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+}
+
+.btn-count #btn2{
+    padding-left: 6px;
+    margin-left: 10px;
+}
+
+
+
+.btn-count #btn1 {
+    margin-right: 10px;
+    margin-left: 0px;
 }
 
 .btn-cart{
-    background-color: #41a36d; /* Green */
+    background-color: #41a36d; 
     border: none;
     color: white;
     padding: 15px 15px;
@@ -47,11 +49,11 @@ display: inline-block;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-  /*   border-radius: 10%; */
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     position: relative;
     top: 50px;
+    left: 15px;
 }
 
 button:hover {

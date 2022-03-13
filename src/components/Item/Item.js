@@ -11,7 +11,7 @@ const Item = ({product})=> {
         <div className="itemContainer">
             <div className="name">
                 <h4>{product.name}</h4>
-                <img src={product.imgfront}/>
+                <img src={product.imgfront} className= 'imgItem'/>
                 <p>${product.price}</p>
             </div>
             <div className="productDetails">

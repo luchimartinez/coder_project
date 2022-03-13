@@ -7,26 +7,32 @@
 }
 
 
-.productDetails > .info_btn {
+.info_btn {
     background-color: coral; /* Green */
     border: none;
+    color: white;
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 18px;
      border-radius: 10%; 
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+     transition-duration: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
     margin-bottom: 15px
 }
 
-.productDetails > .info_btn:hover {
-    background-color: rgb(252, 91, 32); /* Green */
-    border: 2px solid black
+.info_btn:hover{
+    background-color: white;
+    color: coral;
+}
+
+.info_btn a:hover {
+    background-color: white;
+    color: coral;
 }
 
 .info_btn > a {
     text-decoration: none;
     color: white;
+
 }

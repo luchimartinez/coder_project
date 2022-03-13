@@ -10,7 +10,7 @@ const Cartwidget = ({color}) => {
 
     return (
         <div>
-            {getQuantity()!==0&& 
+            {getQuantity()!==0 && 
             <Link to={'/cart'} className="carritoSection" style={{backgroundColor : color}} >
                 <img src = {carrito} width = "80px"/>
                 {getQuantity()}
