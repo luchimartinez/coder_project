@@ -7,8 +7,8 @@
 }
 
 
-.info_btn {
-    background-color: coral; /* Green */
+ .info_btn {
+    background-color: #ff7f50; 
     border: none;
     color: white;
     padding: 10px 10px;
@@ -19,7 +19,7 @@
      border-radius: 10%; 
      transition-duration: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
     margin-bottom: 15px
-}
+} 
 
 .info_btn:hover{
     background-color: white;
@@ -36,3 +36,9 @@
     color: white;
 
 }
+
+.imgItemBack{
+    display: none;
+}
+
+

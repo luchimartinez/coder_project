@@ -12,15 +12,12 @@ const ItemDetail = ({product}) => {
 
     const handleOnAdd = (e) => {
         if (e < product?.stock){
-            console.log("esto vale e", e)
-            console.log(quantity)
             setQuantity(e)
         }
 
     }
 
     useEffect(() => {
-        console.log("esto vale quantity",quantity)
         if (quantity < product?.stock ){
             setIsActive(true)
             addItem(product,quantity)

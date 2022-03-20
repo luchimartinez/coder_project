@@ -23,16 +23,6 @@ const ItemDetailContainer = () => {
         }).finally(()=>{
             setLoading(false)
         })
-/*         getProduct(params.productId).then(item => {
-            setProduct(item)
-        }).catch(err  => {
-            console.log(err)
-        })
-*/
-/*          return (() => {
-            setProduct()
-        })  */
- 
     }, [productId])
 
 

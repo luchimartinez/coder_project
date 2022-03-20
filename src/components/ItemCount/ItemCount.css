@@ -18,12 +18,12 @@ display: inline-block;
 }
 
 .btn-count{
-    background-color: #41a36d; /* Green */
+    background-color: #41a36d; 
     border: none;
     color: white;
     font-size: 14px;
     border-radius: 10%;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     margin-bottom: 15px;
 }
@@ -53,9 +53,9 @@ display: inline-block;
     transition-duration: 0.4s;
     position: relative;
     top: 50px;
-    left: 15px;
+    left: -9px;
 }
 
 button:hover {
-    background-color: #2b9159; /* Green */
+    background-color: #2b9159; 
 }

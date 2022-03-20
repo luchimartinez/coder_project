@@ -10,22 +10,6 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams()
-    
-/*      useEffect(()=>{
-        getProducts.then((products) => {
-            setProducts(products)
-            console.log(products)
-
-        })
-        .catch((error) =>{
-            console.log(error)
-        })
-        .finally(() => {
-
-            setLoading(false);
-
-        });
-    },[categoryId ==='Home'])  */
 
     useEffect(()=>{
         setLoading(true)
@@ -35,18 +19,13 @@ const ItemListContainer = () => {
 
         getDocs(collectionRef).then(response =>{
             const products = response.docs.map(doc =>{
-                console.log(doc)
                 return {id:doc.id,...doc.data()}
             })
-            console.log(products)
             setProducts(products)
         }).finally(()=>{
             setLoading(false)
         })
 
-/*         return (() => {
-            setProducts()
-        })   */  
     },[categoryId] )
 
     return(

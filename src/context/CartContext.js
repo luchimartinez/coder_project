@@ -7,7 +7,6 @@ export const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     useEffect(() => {
-        console.log("esto vale cart",cart)
     }, [cart])
 
      const addItem = (product, quantity) => {
